@@ -1,0 +1,84 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "metadata": {
+                "description": "The location/region where the virtual network is created. Changing this forces a new resource to be created."
+                },
+            "value": "eastus"
+        },
+        "virtualMachineName": {
+            "metadata": {
+                "description": "VM name referenced also in storage-related names."
+                },
+            "value": "GAB-ARM"
+        },
+        "virtualMachineSize": {
+            "metadata": {
+                "description": "Specifies the size of the virtual machine."
+                },
+            "value": "Standard_A1"
+        },
+        "adminUsername": {
+            "metadata": {
+                "description": "Administrator user name."
+                },
+            "value": "gab-admin"
+        },
+        "virtualNetworkName": {
+            "metadata": {
+                "description": "The name for the virtual network."
+                },
+            "value": "GAB-ARM-vnet"
+        },
+        "networkInterfaceName": {
+            "metadata": {
+                "description": "Name of network interface resource."
+                },
+            "value": "gab-arm-nic"
+        },
+        "networkSecurityGroupName": {
+            "metadata": {
+                "description": "Name for the network security group resource."
+                },
+            "value": "GAB-ARM-nsg"
+        },
+        "adminPassword": {
+            "metadata": {
+                "description": "Administrator password."
+                },
+            "value": "<put VM admin password here>"
+        },
+        "addressPrefix": {
+            "metadata": {
+                "description": "The address space that is used by the virtual network."
+                },
+            "value": "10.0.0.0/24"
+        },
+        "subnetName": {
+            "metadata": {
+                "description": "Subnet resource name."
+                },
+            "value": "default"
+        },
+        "subnetPrefix": {
+            "metadata": {
+                "description": "The address prefix to use for the subnet."
+                },
+            "value": "10.0.0.0/24"
+        },
+        "publicIpAddressName": {
+            "metadata": {
+                "description": "The name of public ip resource."
+                },
+            "value": "GAB-ARM-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        }
+    }
+}
